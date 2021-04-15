@@ -48,9 +48,17 @@ img {
 	@extend .font-sm;
 	color: $cSubTitle;
 }
+.flex {
+	display: flex;
+	flex-direction: column;
+}
 .houses {
 	//プロパティの継承
 	@extend .content-width;
+
+	&__inner {
+		@extend .flex;
+	}
 
 	&__title {
 		@extend .font-lr;
@@ -59,5 +67,7 @@ img {
 
 	&__btn {
 		text-align: center;
+		//ボタンは画像と横並びにしない
+		flex-basis: 100%;
 	}
 }
