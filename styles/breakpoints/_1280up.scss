@@ -9,3 +9,9 @@ Stylesheet: 1280px以上のモニタで適用
 		flex-basis: 23%;
 	}
 }
+
+.travel {
+	&__inner {
+		padding: 50px 150px;
+	}
+}
