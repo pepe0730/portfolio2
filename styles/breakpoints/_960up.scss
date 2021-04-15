@@ -29,6 +29,12 @@ Stylesheet: 960px以上のモニタで適用
 	&__description {
 		margin-bottom: 40px;
 	}
+	&__title {
+		position: relative;
+		&::before {
+			display: block;
+		}
+	}
 }
 
 .popular {
