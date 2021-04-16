@@ -130,6 +130,7 @@ main {
 
 .travel {
 	@extend .content-width;
+	@extend .mb-lg;
 	&__inner {
 		@extend .flex;
 		justify-content: space-between;
@@ -188,6 +189,7 @@ main {
 .houses {
 	//プロパティの継承
 	@extend .content-width;
+	@extend .mb-lg;
 
 	&__inner {
 		@extend .flex;
@@ -238,6 +240,7 @@ main {
 		text-align: center;
 		//ボタンは画像と横並びにしない
 		flex-basis: 100%;
+		@extend .mb-lg;
 	}
 	&__img {
 		height: 150px;
