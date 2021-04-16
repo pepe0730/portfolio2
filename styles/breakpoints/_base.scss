@@ -43,6 +43,7 @@ img {
 	@extend .font-lg;
 	font-weight: 600;
 	margin-bottom: 0;
+	display: block;
 }
 .sub-title {
 	@extend .font-sm;
@@ -54,6 +55,68 @@ img {
 }
 .purple {
 	color: $cWineRed;
+}
+
+#content {
+	padding-top: $navHeight;
+}
+
+#container {
+	transition: transform 0.5s, box-shadow 0.5s;
+	background-color: $cWhite;
+	position: relative;
+	z-index: 2;
+}
+
+.header {
+	//背景色を透明に
+	background-color: transparent;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+
+	&.triggered {
+		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@extend .content-width;
+	}
+	&__nav {
+		display: none;
+	}
+	&__ul {
+		@extend .flex;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	&__li {
+		padding: 0;
+		//font-size: 20px;
+		margin-left: 20px;
+		& > a {
+			color: $cBlack;
+			text-decoration: none;
+			//大文字
+			text-transform: uppercase;
+		}
+	}
+
+	& .logo {
+		justify-content: center;
+		font-size: 38px;
+	}
 }
 
 .travel {
