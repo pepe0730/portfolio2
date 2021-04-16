@@ -68,6 +68,15 @@ img {
 	z-index: 2;
 }
 
+#main-content {
+	position: relative;
+	z-index: 0;
+}
+main {
+	position: relative;
+	z-index: -2;
+}
+
 .header {
 	//背景色を透明に
 	background-color: transparent;
@@ -283,5 +292,60 @@ img {
 	& .logo {
 		justify-content: center;
 		font-size: 38px;
+	}
+}
+
+.side {
+	display: none;
+	position: fixed;
+	top: 70%;
+	transform: translateY(-50%);
+	color: $cBlack;
+	& a {
+		margin: 0 40px;
+		color: $cBlack;
+		text-decoration: none;
+		vertical-align: middle;
+	}
+	&.left {
+		left: 50px;
+		& .side__inner {
+			transform: rotate(-90deg);
+			transform-origin: top left;
+		}
+	}
+	&.right {
+		right: 50px;
+		& .side__inner {
+			margin: 0 40px;
+			transform-origin: top right;
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.icon {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		left: -20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1em;
+		height: 1em;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&.twitter {
+		&::before {
+			background-image: url(../../images/twitter.svg);
+		}
+	}
+	&.fb {
+		&::before {
+			background-image: url(../../images/facebook.svg);
+		}
 	}
 }
